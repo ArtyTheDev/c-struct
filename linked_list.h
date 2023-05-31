@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include "types.h"
 
-struct Node{
+struct LNode{
   void* data;
   struct Node *next;
 };
 
 
-struct Node *create_node(void* data, struct Node *next);
+struct LNode *create_l_node(void* data, struct LNode *next);

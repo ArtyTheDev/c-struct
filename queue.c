@@ -38,3 +38,10 @@ void *pop_from_queue(struct Queue *queue){
   queue->size--;
   return element;
 }
+
+void free_queue(struct Queue *queue){
+  for(int i = 0; i < queue->size; i++){
+    free(queue->data[i]);
+  }
+  free(queue);
+}

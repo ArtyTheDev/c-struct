@@ -127,6 +127,13 @@ void sort_f_array(struct FixedArray *f_array){
   }
 }
 
+void free_f_array(struct FixedArray *f_array){
+  for(int i = 0; i < f_array->size; i++){
+    free(f_array->data[i]);
+  }
+  free(f_array);
+}
+
 void print_f_array(struct FixedArray *f_array){
   printf("[");
   for (int i = 0; i < f_array->size; i++) {
